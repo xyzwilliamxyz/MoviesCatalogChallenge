@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MoviesCatalog</string>
+    <string name="search">search</string>
+    <string name="title_movies">Movies</string>
+    <string name="movie_without_data">No Data</string>
+    <string name="movie_details_title">Title</string>
+    <string name="movie_details_overview">Overview</string>
+    <string name="movie_details_genres">Genres</string>
+    <string name="movie_details_languages">Languages</string>
+    <string name="movie_details_release_date">Release Date</string>
+    <string name="message_filter">In last … days</string>
+    <string name="filter_ok">OK</string>
+    <string name="filter_cancel">Cancel</string>
+    <string name="no_data_message">No data for movie!</string>
+    <string name="error_message">An error occurred while trying to fetch the movie list</string>
+    <string name="error_try_again">TRY AGAIN</string>
+    <string name="error_close_app">CLOSE APP</string>
+</resources>

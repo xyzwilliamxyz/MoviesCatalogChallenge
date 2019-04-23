@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@color/colorPrimaryDark">
+    <LinearLayout android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp">
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:srcCompat="@drawable/cover_sample"
+                android:id="@+id/iv_cover"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                tools:ignore="ContentDescription"/>
+
+        <TextView
+                android:text="@string/movie_details_title"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:id="@+id/tv_title_label" android:layout_marginTop="8dp"
+                android:textStyle="bold"/>
+        <TextView
+                tools:text="Lord of the Rings"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:id="@+id/tv_title_value"
+                android:layout_marginTop="8dp"/>
+
+        <TextView
+                android:text="@string/movie_details_overview"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:id="@+id/tv_overview_label" android:layout_marginTop="8dp"
+                android:textStyle="bold"/>
+        <TextView
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:id="@+id/tv_overview_value"
+                android:layout_marginTop="8dp"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tum mihi Piso: Quid ergo? Quamquam te quidem video minime esse deterritum. Tum mihi Piso: Quid ergo? Illa tamen simplicia, vestra versuta. Quid ergo hoc loco intellegit honestum?" />
+
+        <TextView
+                android:text="@string/movie_details_release_date"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:id="@+id/tv_release_date_label" android:layout_marginTop="8dp"
+                android:textStyle="bold"/>
+        <TextView
+                tools:text="10/01/2001"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:id="@+id/tv_release_date_value"
+                android:layout_marginTop="8dp"/>
+
+        <TextView
+                android:text="@string/movie_details_genres"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:id="@+id/tv_genres_label" android:layout_marginTop="8dp"
+                android:textStyle="bold"/>
+        <TextView
+                tools:text="Fantasy, Action, Drama"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:id="@+id/tv_genres_value"
+                android:layout_marginTop="8dp"/>
+
+        <TextView
+                android:text="@string/movie_details_languages"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:id="@+id/tv_languages_label" android:layout_marginTop="8dp"
+                android:textStyle="bold"/>
+        <TextView
+                tools:text="Enlgish, Portugues, Spanish"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:id="@+id/tv_languages_value"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"/>
+    </LinearLayout>
+</ScrollView>
