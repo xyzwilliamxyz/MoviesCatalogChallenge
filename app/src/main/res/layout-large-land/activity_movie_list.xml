@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,21 +7,22 @@
         android:layout_height="match_parent"
         tools:context=".ui.movielist.MovieListActivity"
         android:background="@color/colorPrimaryDark"
-        android:id="@+id/cl_container">
+        android:id="@+id/sv_movie_list"
+        android:orientation="horizontal">
 
-        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
-                     app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
-                     app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                      android:orientation="horizontal">
 
                 <androidx.recyclerview.widget.RecyclerView
                         android:layout_margin="12dp"
                         android:id="@+id/rv_movies"
                         android:background="@color/colorPrimaryDark"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:clipToPadding="false"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                         android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                         tools:listitem="@layout/item_movie"
                         tools:context="com.google.samples.apps.sunflower.GardenActivity"
                         tools:itemCount="10" />
@@ -34,8 +35,7 @@
                         android:indeterminate="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center|bottom"
-                        android:layout_marginBottom="50dp" />
-        </FrameLayout>
+                        android:layout_gravity="center|bottom" />
+        </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

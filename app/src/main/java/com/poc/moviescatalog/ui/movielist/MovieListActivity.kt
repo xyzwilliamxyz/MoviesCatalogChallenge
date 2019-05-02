@@ -44,7 +44,7 @@ class MovieListActivity : AppCompatActivity(), MovieListContract.View, OnMovieCl
             }
         })
 
-         presenter.start()
+        presenter.start()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -110,7 +110,7 @@ class MovieListActivity : AppCompatActivity(), MovieListContract.View, OnMovieCl
 
     override fun openMovie(movie: Movie) {
         if (movie.title.equals(getString(R.string.movie_without_data))) {
-            Snackbar.make(cl_container, getString(R.string.no_data_message), Snackbar.LENGTH_LONG).show()
+            Snackbar.make(rv_movies, getString(R.string.no_data_message), Snackbar.LENGTH_LONG).show()
         } else {
             startActivity(MovieDetailsActivity.getIntent(this, movie))
         }
