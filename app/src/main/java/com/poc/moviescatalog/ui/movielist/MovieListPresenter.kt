@@ -24,7 +24,7 @@ class MovieListPresenter @Inject constructor(private val view: MovieListContract
 
     private var lastCall: Long = 0
 
-    override fun start() {
+    override fun onStart() {
         view.showLoading(true)
         getMoviesChanges.execute(MovieChangesApiCallback())
     }
@@ -45,9 +45,13 @@ class MovieListPresenter @Inject constructor(private val view: MovieListContract
     }
 
     override fun applyFilter(filter: String) {
-
         view.showLoading(true)
         getMoviesChanges.execute(MovieChangesApiCallback(), filter.toInt())
+    }
+
+    override fun onFinish() {
+        getMoviesChanges.dispose()
+        getMovieDetails.dispose()
     }
 
     inner class MovieChangesApiCallback: ApiCallback<List<Change>> {

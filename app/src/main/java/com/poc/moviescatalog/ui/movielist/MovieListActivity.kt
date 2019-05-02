@@ -44,7 +44,7 @@ class MovieListActivity : AppCompatActivity(), MovieListContract.View, OnMovieCl
             }
         })
 
-        presenter.start()
+        presenter.onStart()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -64,6 +64,11 @@ class MovieListActivity : AppCompatActivity(), MovieListContract.View, OnMovieCl
         }
 
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        presenter.onFinish()
     }
 
     private fun showFilter() {
@@ -103,7 +108,7 @@ class MovieListActivity : AppCompatActivity(), MovieListContract.View, OnMovieCl
         val builder = AlertDialog.Builder(this)
         builder.setTitle(getString(R.string.error_message))
 
-        builder.setPositiveButton(getString(R.string.error_try_again)) { _, _ -> presenter.start() }
+        builder.setPositiveButton(getString(R.string.error_try_again)) { _, _ -> presenter.onStart() }
         builder.setNegativeButton(getString(R.string.error_close_app)) { dialog, _ -> onSupportNavigateUp() }
         builder.show()
     }

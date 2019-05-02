@@ -3,6 +3,8 @@ package com.poc.moviescatalog.ui
 interface BaseContract {
 
     interface Presenter {
-        fun start()
+        fun onStart()
+
+        fun onFinish()
     }
 }
